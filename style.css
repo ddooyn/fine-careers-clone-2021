@@ -6,6 +6,7 @@
     font-weight: 400;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Pretendard-Bold';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
@@ -27,7 +28,10 @@ body {
     overflow-x: hidden;
 }
 
-.header, .navbar, .navbar-menu, .navbar-icons {
+.header,
+.navbar,
+.navbar-menu,
+.navbar-icons {
     display: flex;
 }
 
@@ -84,7 +88,10 @@ body {
 }
 
 /* contents */
-.tit-main, .cont-culture, .cont-finers, footer {
+.tit-main,
+.cont-culture,
+.cont-finers,
+footer {
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -140,10 +147,11 @@ body {
     top: 60px;
     left: 0;
     right: 25px;
-    height: 190px;
+    height: 200px;
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
 .dropdown-list::-webkit-scrollbar {
     width: 12px;
 }
@@ -171,24 +179,94 @@ body {
     background: none;
 }
 
-.cont-culture, .cont-finers, footer {
+.cont-culture,
+.cont-finers,
+footer {
     padding: 0 30px;
 }
+
 .cont-culture {
     margin-top: 130px;
-    /* display: none; */
+
 }
 
-.cont-culture h2, .cont-finers h2 {
+.cont-culture h2,
+.cont-finers h2 {
     font-family: 'Pretendard-Bold';
     font-size: 60px;
 }
 
-.cont-finers {
-    margin-bottom: 160px;
+.cont-culture .culture-sec {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.cont-footer-wrap, .btn-footer, .info-footer {
+.culture-sec .culture-art {
+    width: 585px;
+}
+
+.culture-sec .culture-art a img {
+    margin-top: 70px;
+    width: 100%;
+    height: 244px;
+    object-fit: cover;
+}
+
+.culture-sec .culture-art a strong {
+    display: block;
+    margin: 30px 0 20px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.culture-sec .culture-art a p {
+    font-size: 16px;
+    color: #737373;
+    line-height: 1.5em;
+}
+
+.more-culture {
+    display: inline-block;
+    width: 1200px;
+    margin-top: 70px;
+    text-align: right;
+}
+
+.more-culture::after {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    content: '';
+    width: 21px;
+    height: 21px;
+    background: url('src/chevron-right.svg') no-repeat;
+    background-position: center;
+}
+
+.cont-finers {
+    margin: 120px auto 160px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.cont-footer-wrap,
+.btn-footer,
+.info-footer {
     display: flex;
     flex-direction: row-reverse;
 }
