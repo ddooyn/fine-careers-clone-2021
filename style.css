@@ -14,6 +14,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Pretendard-Black';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
 .txt-hide {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -58,7 +65,9 @@ body {
 
 .navbar-icons {
     position: absolute;
-    right: 0;
+    top: 26px;
+    right: 0px;
+    margin-right: 10px;
 }
 
 .btn-lang {
@@ -147,7 +156,7 @@ footer {
     padding: 0 0 0 40px;
     position: absolute;
     top: 270px;
-    /* left: 0; */
+    left: 0;
     width: 90%;
     color: white;
 }
@@ -163,6 +172,10 @@ footer {
 
 .wrap-options {
     display: flex;
+}
+
+button {
+    cursor: pointer;
 }
 
 .dropdown {
@@ -187,11 +200,16 @@ footer {
     background: url("src/chevron-down.svg") right 13px center no-repeat;
 }
 
+.dropdown-btn.on+.dropdown-list {
+    display: block;
+}
+
 .dropdown-btn.jobunit {
     width: 220px;
 }
 
 .dropdown-list {
+    display: none;
     position: absolute;
     top: 60px;
     left: 0;
@@ -220,6 +238,16 @@ footer {
 
 .dropdown-list li {
     padding: 5px 0;
+}
+
+.dropdown-list li button {
+    background: inherit;
+    color: #fff;
+    border: none;
+}
+
+.dropdown-list li button:hover {
+    color: #07b53b;
 }
 
 .desc-scroll {
@@ -266,7 +294,7 @@ footer {
     font-size: 60px;
 }
 
-.cont-culture .culture-sec {
+.culture-sec {
     width: 1200px;
     display: flex;
     justify-content: space-between;
@@ -329,7 +357,7 @@ footer {
     background-size: cover;
     min-width: 1200px;
     background-position: center;
-    
+
 }
 
 .cont-finers h2 {
@@ -346,7 +374,7 @@ footer {
     height: 402px;
 }
 
-.cont-finers .career-info {
+.career-info {
     min-width: 1200px;
     display: flex;
     /* flex-wrap: wrap; */
@@ -395,6 +423,7 @@ footer {
 }
 
 .cont-finers .career-info .career-card a h3 {
+    font-family: 'Pretendard-Black';
     font-size: 46px;
     font-weight: 900;
     height: 156px;
@@ -402,6 +431,7 @@ footer {
 }
 
 .cont-finers .career-info .career-card a strong {
+    font-family: 'Pretendard-Black';
     display: block;
     margin-top: 40px;
     font-size: 24px;
@@ -409,6 +439,7 @@ footer {
 }
 
 .cont-finers .career-info .career-card a em {
+    font-family: 'Pretendard-Black';
     display: block;
     font-size: 16px;
     font-weight: 900;
@@ -427,7 +458,7 @@ footer {
     -webkit-box-orient: vertical;
 }
 
-.cont-finers .more-finers {
+.more-finers {
     display: block;
     width: 1200px;
     text-align: right;
@@ -473,7 +504,8 @@ footer {
     cursor: pointer;
 }
 
-.policy:hover,.rel-site button:hover {
+.policy:hover,
+.rel-site button:hover {
     color: #646465;
 }
 
@@ -518,6 +550,151 @@ footer {
     height: 25px;
 }
 
-.btn-sns button img:hover{
+.btn-sns button img:hover {
     filter: invert(40%) sepia(5%) saturate(61%) hue-rotate(201deg) brightness(94%) contrast(88%);
+}
+
+
+/* media query */
+@media screen and (max-width: 828px) {
+    .navbar-menu {
+        display: none;
+    }
+
+    .tit-main h3 {
+        font-size: 40px;
+        margin-bottom: 50px;
+        display: block;
+        width: 310px;
+        font-family: 'Pretendard-Bold';
+        letter-spacing: -1px;
+    }
+
+    .wrap-options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown-btn,
+    .dropdown-btn.jobunit {
+        margin-bottom: 10px;
+        padding: 10px 0;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #fff;
+        width: 240px;
+        height: 50px;
+        font-family: 'Pretendard-Bold';
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        background: url("src/chevron-down.svg") right 13px center no-repeat;
+    }
+
+    .dropdown-list {
+        display: none;
+    }
+
+    .btn-go {
+        width: 62px;
+        margin: 0;
+        display: inline-block;
+        border: none;
+        background: none;
+    }
+
+    .tit-main,
+    .cont-culture,
+    footer {
+        /* margin: 0 auto; */
+        max-width: 900px;
+    }
+
+    .cont-culture h2,
+    .cont-finers h2 {
+        margin-top: 70px;
+        font-size: 36px;
+    }
+
+    .culture-sec {
+        width: 100%;
+        max-width: 900px;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .culture-sec .culture-art {
+        width: auto;
+    }
+
+    .more-culture {
+        display: inline-block;
+        width: 828px;
+        margin-top: 70px;
+        text-align: right;
+    }
+
+    .cont-finers .title-area {
+        padding-top: 10px;
+        height: 261px;
+        min-width: 828px;
+    }
+
+    .cont-finers .ul-area {
+        max-width: 828px;
+        margin: 0 auto;
+        padding: 0;
+        height: 1000px;
+        /* 얘 조절하기 */
+    }
+
+    .career-info {
+        min-width: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        top: -70px;
+        left: 0;
+        /* padding: 0 30px; */
+    }
+
+    .cont-finers .career-info .career-card {
+        margin: 0 auto;
+        width: 90vw;
+        height: auto;
+    }
+
+    .cont-finers .career-info .career-card a h3 {
+        font-size: 36px;
+        height: 100px;
+    }
+
+    .cont-finers .career-info .career-card a p {
+        font-size: 15px;
+    }
+    .cont-finers .career-info .career-card:hover {
+        background: #fff;
+    }
+    
+    .cont-finers .career-info .career-card:hover h3 {
+        color: inherit;
+    }
+    
+    .cont-finers .career-info .career-card:hover strong,
+    .cont-finers .career-info .career-card:hover em,
+    .cont-finers .career-info .career-card:hover p {
+        visibility: visible;
+    }
+    
+    .cont-finers .career-info .career-card:hover span {
+        display: none;
+    }
+
+    .more-finers {
+        display: block;
+        width: 828px;
+        text-align: right;
+        position: relative;
+        top: -130px;
+        margin-bottom: 130px;
+    }
 }

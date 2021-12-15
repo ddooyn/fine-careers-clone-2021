@@ -8,6 +8,7 @@
   <title>FINE CAREERS</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
 </head>
 
 <body>
@@ -48,38 +49,38 @@
         <div class="dropdown">
           <button class="region dropdown-btn">Region</button>
           <ul class="dropdown-list">
-            <li>East Asia</li>
-            <li>Southeast Asia</li>
-            <li>North America</li>
+            <li><button> East Asia</button></li>
+            <li><button>Southeast Asia</button></li>
+            <li><button>North America</button></li>
           </ul>
         </div>
         <div class="dropdown">
           <button class="cities dropdown-btn">City</button>
           <ul class="dropdown-list">
-            <li>Bundang</li>
-            <li>Dalian</li>
-            <li>Fukuoka</li>
-            <li>Hong Kong</li>
-            <li>Kyoto</li>
-            <li>Seoul</li>
-            <li>Shanghai</li>
-            <li>Taipei</li>
-            <li>Tokyo</li>
-            <li>Bangkok</li>
-            <li>Jakarta</li>
-            <li>New York</li>
-            <li>Palo Alto</li>
+            <li><button>Bundang</button></li>
+            <li><button>Dalian</button></li>
+            <li><button>Fukuoka</button></li>
+            <li><button>Hong Kong</button></li>
+            <li><button>Kyoto</button></li>
+            <li><button>Seoul</button></li>
+            <li><button>Shanghai</button></li>
+            <li><button>Taipei</button></li>
+            <li><button>Tokyo</button></li>
+            <li><button>Bangkok</button></li>
+            <li><button>Jakarta</button></li>
+            <li><button>New York</button></li>
+            <li><button>Palo Alto</button></li>
           </ul>
         </div>
         <div class="dropdown">
           <button class="jobunit dropdown-btn">Job Unit</button>
           <ul class="dropdown-list">
-            <li>Engineering</li>
-            <li>Design</li>
-            <li>Product Planning</li>
-            <li>Business & Sales</li>
-            <li>Marketing & Comms</li>
-            <li>Corporate</li>
+            <li><button>Engineering</button></li>
+            <li><button>Design</button></li>
+            <li><button>Product Planning</button></li>
+            <li><button>Business & Sales</button></li>
+            <li><button>Marketing & Comms</button></li>
+            <li><button>Corporate</button></li>
           </ul>
         </div>
         <button class="btn-go">
@@ -221,16 +222,6 @@
       </div>
     </div>
   </footer>
-  <script>
-    const languageButton = document.querySelector('.btn-lang');
-    const relatedButton = document.querySelector('.btn-rel');
-    languageButton.addEventListener('click', () => {
-      languageButton.classList.toggle('on');
-    })
-    relatedButton.addEventListener('click', () => {
-      relatedButton.classList.toggle('on');
-    })
-  </script>
 </body>
 
 </html>
