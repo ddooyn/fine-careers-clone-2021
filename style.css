@@ -287,7 +287,6 @@ footer {
 
 .cont-culture {
     margin-top: 130px;
-
 }
 
 .cont-culture h2,
@@ -656,6 +655,10 @@ footer {
         padding-left: 25px;
     }
 
+    .cont-culture {
+        margin-top: 75px;
+    }
+
     .culture-sec {
         width: 100%;
         max-width: 900px;
@@ -665,6 +668,10 @@ footer {
 
     .culture-sec .culture-art {
         width: auto;
+    }
+
+    .culture-sec .culture-art a img {
+        margin-top: 30px;
     }
 
     .more-culture {
